@@ -7,38 +7,65 @@
 <body>
 
 <header>
-    <div>
-        <h1>Welcome to Spark Blogs</h1>
-        <h3>This is where you get my blogs</h3>
-    </div>
-    <div>
-        <a href="Spark_Main.html" id="home-icon">
+    <a href="Spark_Main.html" id="home-icon">
         <img src="Pictures/spark_homepage_logo.svg" alt="spark homepage logo" />
     </a>
+    <div>
+        <h1>Welcome to Spark Blogs</h1>
+        <h4>This is where you get my blogs</h4>
     </div>
 </header>
 
 <main>
-
+    <div class="blogs">
+    <a href="blogs/blog-1.html">
+        <button style="">This is my first Blog: <b>2025.2.22.</b></button>
+    </a>
+    </div>
 
 </main>
 
 </body>
 
 <style>
-* {
-    text-align: center;
+body, main {
+    background-color: #FC6969;
     font-family: optima;
-    background-color: #FCD269;
 }
 
 header {
-    margin: 200px 400px
-    background-color: #7369FC;
+    background-color: #69FCFC;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: auto 0 40px 0;
+    text-align: center;
 }
 
-    
+.blogs a button {
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: white;
+    color: black;
+    padding: 30px;
+
+}
+
+#home-icon {
+    position: absolute;
+    top: 11px;
+    left: 14px;
+}
+
+
+#home-icon img {
+    width: 41px;
+    height: auto;
+}
+
 </style>
 
-    
+
 </html>
