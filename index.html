@@ -9,13 +9,14 @@
 
 <header>
     <a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" alt="the spark logo"></a>
-    <div class="menu-selections">
+    <button class="menu-button">$ Menu</button>
+    <nav class="menu">
         <a href="spark_blog.html">Blogs</a>
         <a href="spark_time_line.html">Spark's time line</a>
         <a href="spark_intro.html">Intro</a>
         <a href="spark_logo.html">Logo Page</a>
         <a href="spark_calendar.html">Spark Calendar</a>
-    </div>
+    </nav>
 </header>
 
 <div class="line"></div>
@@ -28,7 +29,12 @@
 
 
 </main>
-
+<script>
+    // JavaScript to make the menu button work
+    document.querySelector(".menu-btn").addEventListener("click", function() {
+        document.querySelector(".menu").classList.toggle("active"); // Toggle menu
+    });
+</script>
 
 </body>
 
