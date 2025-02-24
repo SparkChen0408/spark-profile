@@ -32,7 +32,12 @@
 <script>
     // JavaScript to make the menu button work
     document.querySelector(".menu-button").addEventListener("click", function() {
-        document.querySelector(".menu").classList.toggle("active"); // Toggle menu
+        let menu = document.querySelector(".menu");
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "block"; // Show menu
+        } else {
+            menu.style.display = "none"; // Hide menu
+        }
     });
 </script>
 
