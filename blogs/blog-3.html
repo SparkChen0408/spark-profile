@@ -11,7 +11,7 @@
   <p>The Full day Skiing</p>
 </div>
   
-<div class="container">
+<div class="container-1">
   <h1>Morning</h1>
   <p>This morning, as we brothers woke up with a cool and fresh made brain neurons,
   we were definitely ready for a whole new day of skiing. It was 6:30-ish in the morning, and the sky was not too white. 
@@ -62,14 +62,26 @@
   
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: 
-  
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Make it responsive */
+    max-width: 600px; /* Prevent it from being too wide */
+    text-align: center;
+    margin: 20px auto; /* Center it in the middle */
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    word-wrap: break-word;
 }
-  
+
+.container-1 p {
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 90%;
+}
 </stlye>
 </html>
