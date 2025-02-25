@@ -9,6 +9,7 @@
 
 <header>
     <a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" alt="the spark logo"></a>
+    <h1 class="MoveUpDown">Hello, My name is Spark</h1>
     <button class="menu-button">$ Menu</button>
     <nav class="menu">
         <a href="spark_blog.html">Blogs</a>
@@ -110,6 +111,51 @@ header img {
     cursor: pointer;
     border-radius: 5px;
 }
+@keyframes MoveUpDown {
+    0%,
+    70%,
+    100%{
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+
+    80% {
+        transform: translateX(100px);
+        background-color: lightblue;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    82% {
+        transform: translateX(50px);
+        background-color: lightblue;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    82% {
+        transform: translateX (0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+    }
+    100% {
+        transform: rotate(360deg);
+        border-radius: 10px;
+    }
+}
+
+
+.MoveUpDown {
+    animation: MoveUpDown 2s 10;
+}
+    
 .line {
     height: 3px;
     margin-top: 20px;
