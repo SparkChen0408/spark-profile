@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the spark profile</title>
+</head>
+<body>
+
+<header>
+    <div><a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" alt="the spark logo"></a></div>
+    <div><h1 class="MoveUpDown">Hello, My name is Spark</h1></div>
+    <div><button class="menu-button">$ Menu</button>
+    <nav class="menu">
+        <a href="spark_blog.html">Blogs</a>
+        <a href="spark_time_line.html">Spark's timeline</a>
+        <a href="spark_intro.html">Intro</a>
+        <a href="spark_logo.html">Logo Page</a>
+        <a href="spark_calendar.html">Spark Calendar</a>
+    </nav></div>
+</header>
+
+<main>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 300px; display: flex; justify-content: center; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform; z-index: -1; ">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGglXNnUU4/i715Ntu-o5KXAnC7OrGSww/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+    </div>
+</main>
+<script>
+    // JavaScript to make the menu button work
+    document.querySelector(".menu-button").addEventListener("click", function() {
+        let menu = document.querySelector(".menu");
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "block"; // Show menu
+        } else {
+            menu.style.display = "none"; // Hide menu
+        }
+    });
+</script>
+
+</body>
+
+<style>
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #84E7AB;
+    min-height: 70px;
+    color: white;
+    padding: 10px 25px;
+    box-shadow: border-box;
+    font-weight: 800;
+    font-family: optima;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index; 1000;
+}
+header div {
+    flex: 1;
+    text-align: center;
+}
+
+
+header img {
+    width: 40px;
+    height: auto;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.menu {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px;
+    transition: all 0.7s;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: #84E7AB;
+    border-radius: 3px;
+    box-shadow: 2px 3px 2px rgba (0, 0, 0, 0.3);
+}
+
+.menu-button {
+    background-color: white;
+    border: 2px solid #E79184;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@keyframes MoveUpDown {
+    0%,
+    100%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-21px);
+    }
+}
+
+.MoveUpDown {
+    animation: MoveUpDown 2s infinite;
+    font-size: 1rem;
+}
+
+.line {
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: lightgrey;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu-selections {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
+
+</style>
+
+
+</html>
