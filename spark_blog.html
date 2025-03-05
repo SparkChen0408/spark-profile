@@ -19,6 +19,17 @@
     </nav></div>
 </header>
 <main>
+    <script>
+    // JavaScript to make the menu button work
+    document.querySelector(".menu-button").addEventListener("click", function() {
+        let menu = document.querySelector(".menu");
+        if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "block"; // Show menu
+        } else {
+            menu.style.display = "none"; // Hide menu
+        }
+    });
+    </script>
     <div class="blogs">
             <a href="blogs/blog-1.html">
         <button >This is my first Blog: <b>2025.2.22.</b></button>
