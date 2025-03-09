@@ -51,10 +51,15 @@
 
 <style>
 .spark-selfie {
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
+    width: 250px; /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Make sure it crops properly */
+    border-radius: 15px; /* Add rounded corners for elegance */
+    display: block; /* Ensures proper spacing */
+    margin: 0 auto; /* Center it */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Add soft shadow */
 }
+
 
 .spark-fact-box h1 {
     font-size: 40px;
