@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +22,18 @@
 </header>
 
 <main>
+  <div class="spark-facts-big-box">
+    <div class="spark-fact-box" id="box-1">
+      <h1><span>Hi</span>, I'm <span>Spark</span></h1>
+      <h2><span>MIS</span> Student + <span>Website</span> Eater</h2>
+      <p>ALright, let me introduce me name. My name is <span>Spark Chen</span>, I am currently 14 years old, but
+          very soon, I will <span>15 years old</span>. I am a person who is not happy, and I am not satisfied about this whole piece of shitty life. So yeah, bear with me.</p>
+    </div>
+    <div class="spark-fact-box" id="box-2"></div>
+  </div>
+  <div class="">
+
+  </div>
 </main>
 <script>
     // JavaScript to make the menu button work
@@ -37,14 +50,80 @@
 </body>
 
 <style>
+.spark-fact-box h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.spark-fact-bpx h2 {
+    font-size: 25px;
+}
+.spark-fact-box p {
+    font-size: 20px;
+    width: 500px;
+    border: 5px dashed;
+    position: relative;
+    left: 70px;
+    padding: 10px;
+}
 
+body {
+    background-color: #F1EEEE;
+}
 
+.spark-facts-big-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  position: relative;
+  top: 120px;
+
+}
+.spark-fact-box {
+  margin: 30px;
+  height: 80%;
+  width: 80%;
+  overflow: scroll;
+  padding: 15px;
+  font-family: optima;
+  color: black;
+  box-sizing: border-box;
+  background-color: pink;
+  text-align: start;
+}
+span {
+    font-size: 60px;
+    font-weight: 900;
+    color: darkblue;
+}
+h2 span {
+    color: darkblue;
+    font-size: 25px;
+}
+p span {
+   background: yellow;
+   font-size: 20px;
+   font-weight: 800;
+   color: black;
+}
+#box-1 {
+    margin-right: 0;
+    border-right: 0;
+    padding: 20px;
+    text-align: start;
+}
+#box-2 {
+    margin-left: 0;
+    border-left: 0;
+    background-color: transparent;
+}
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #228B22;
+    background-color: #51d0de;
     min-height: 70px;
     color: white;
     padding: 10px 25px;
@@ -90,9 +169,10 @@ header img {
 
 .menu a:hover {
     color: white;
-    background-color: #228B22;
+    background-color: #51d0de;
     border-radius: 3px;
     box-shadow: 2px 3px 2px rgba (0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
 .menu-button {
@@ -102,6 +182,18 @@ header img {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    font-family: optima;
+    transition: all 0.2s;
+}
+.menu-button:hover {
+    background-color: #51d0de;
+    border: 2px solid #F1EEEE;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-family: optima;
 }
 @keyframes MoveUpDown {
     0%,
