@@ -8,19 +8,68 @@
 </head>
 <body>
 
-<header>
-    <div><a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" alt="the spark logo"></a></div>
-    <div><h1 class="MoveUpDown">Hello, My name is Spark</h1></div>
-    <div><button class="menu-button">$ Menu</button>
-    <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="spark_blog.html">Blogs</a>
-        <a href="spark_intro.html">Intro</a>
-        <a href="spark_logo.html">Logo</a>
-        <a href="resume.html">Resume</a>
-    </nav></div>
-</header>
-
+<div class="navbar">
+    <div class="navdiv">
+        <div><a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" alt="the spark logo"></a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="spark_blog.html">Blogs</a></li>
+            <li><a href="spark_intro.html">Intro</a></li>
+            <li><a href="spark_logo.html">Logo</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <button><a href="#">Cloud Me</a></button>        
+        </ul>
+    </div>
+</div>
+<style>
+* {
+    text-decoration: none;
+}
+.navbar {
+    background-color: 	#F4A460;
+    font-family: optima;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px;
+	display: flex;
+    flex-wrap: wrap;
+}
+li a:hover {
+    background-color: white;
+    color: black;
+}
+button {
+    background-color: #DEB887;
+    margin-left: 15px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    border: 3px solid white;
+}
+button a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+button:hover {
+    border: 3px solid rgba(255, 255, 255, 0.425);
+    outline: 4px solid white;
+}
+</style>
 <main>
   <div class="spark-facts-big-box">
     <div class="spark-fact-box" id="box-1">
@@ -35,31 +84,26 @@
 
   </div>
 </main>
-<script>
-    // JavaScript to make the menu button work
-    document.querySelector(".menu-button").addEventListener("click", function() {
-        let menu = document.querySelector(".menu");
-        if (menu.style.display === "none" || menu.style.display === "") {
-            menu.style.display = "block"; // Show menu
-        } else {
-            menu.style.display = "none"; // Hide menu
-        }
-    });
-</script>
-
+<style>
+    img {
+        width: 500px;
+        border-radius: 30px;
+    }
+</style>
 </body>
 
 <style>
-.spark-selfie {
-    width: 250px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Make sure it crops properly */
-    border-radius: 15px; /* Add rounded corners for elegance */
-    display: block; /* Ensures proper spacing */
-    margin: 0 auto; /* Center it */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Add soft shadow */
-}
 
+/*
+.spark-selfie {
+    width: 250px;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px; 
+    display: block; 
+    margin: 0 auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+}
 
 .spark-fact-box h1 {
     font-size: 40px;
@@ -131,27 +175,6 @@ p span {
     width: 100%;
     height: auto;
 }
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #51d0de;
-    min-height: 70px;
-    color: white;
-    padding: 10px 25px;
-    box-shadow: border-box;
-    font-weight: 800;
-    font-family: optima;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index; 1000;
-}
-header div {
-    flex: 1;
-    text-align: center;
-}
 
 
 header img {
@@ -161,53 +184,7 @@ header img {
     align-self: flex-start;
 }
 
-.menu {
-    display: none;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    position: absolute;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
 
-.menu a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 5px;
-    transition: all 0.7s;
-}
-
-.menu a:hover {
-    color: white;
-    background-color: #51d0de;
-    border-radius: 3px;
-    box-shadow: 2px 3px 2px rgba (0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-.menu-button {
-    background-color: white;
-    border: 2px solid #E79184;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: optima;
-    transition: all 0.2s;
-}
-.menu-button:hover {
-    background-color: #51d0de;
-    border: 2px solid #F1EEEE;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
-    font-family: optima;
-}
 @keyframes MoveUpDown {
     0%,
     100%{
@@ -259,7 +236,7 @@ h1, h2 {
         font-size: 20px;
     }
 }
-
+*/
 </style>
 
 
