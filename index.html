@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,7 @@
 * {
     text-decoration: none;
 }
-.spark-logo {
+img {
     width: 50px;
     height: auto;
 }
@@ -84,14 +85,92 @@ button:hover {
     </div>
 <div class="spark-fact-box" id="box-2"><img class="spark-selfie" src="https://github.com/SparkChen0408/spark-profile/blob/main/life-images/IMG_1260.jpg?raw=true" alt="spark-picture"></div>
   </div>
-  <div class="">
-
+  <div class="spark-hobbies-box">
+    <h1>My hobbies:</h1>
+    <ul>
+        <li>Soccer</li>
+        <li>Study</li>
+        <li>Sleep</li>
+    </ul>
   </div>
 </main>
 <style>
-    img {
+    h1 {
+        position: relative;
+        width: max-content;
+        padding: 10px;
+    }
+    h1::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(to top right, purple, blue);
+        left: 0;
+        bottom: 0;
+        border-radius: 20px;
+    }
+    span {
+        color: rgb(68, 0, 255);
+    }
+    #box-1 {
+        position: relative;
+        background: #FAF0E6;
+        color: rgb(19, 19, 19);
+        margin: 40px auto;
         width: 500px;
+        padding: 20px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+    @property --angle{
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+    #box-1::after, #box-1::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(from var(--angle) , transparent 66%, #ff4546 );
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        padding: 5px;
+        border-radius: 20px;
+        animation: 2s spin linear infinite;
+    }
+    #box-1::before {
+        filter: blur(1.6rem);
+        opacity: 0.76;
+    }
+    @keyframes spin{
+        from{
+            --angle: 0deg;
+        }
+        to{
+            --angle: 360deg;
+        }
+    }
+    .spark-selfie {
+        margin: 0 auto;
+        display: block;
+        width: 400px;
         border-radius: 30px;
+        position: relative,
+    }
+    .spark-selfie::after {
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        height: 100%;
+        width: 100%;
+        background: blue;
+        
     }
 </style>
 </body>
