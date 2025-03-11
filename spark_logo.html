@@ -5,43 +5,97 @@
     <title>spark logo</title>
 </head>
 <body>
-<header>
-    <a href="index.html" id="home-icon">
-        <img src="Pictures/spark_homepage_logo.svg" alt="spark homepage logo" />
-    </a>
-    <h1>Hi, welcome to Spark Logo</h1>
-</header>
-
-
+<div class="navbar">
+    <div class="navdiv">
+        <div><a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" alt="the spark logo"></a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="spark_blog.html">Blogs</a></li>
+            <li><a href="spark_intro.html">Intro</a></li>
+            <li><a href="spark_logo.html">Logo</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <button><a href="#">Cloud Me</a></button>        
+        </ul>
+    </div>
+</div>
+<style>
+* {
+    text-decoration: none;
+}
+img {
+    width: 50px;
+    height: auto;
+}
+.navbar {
+    background-color: 	#F4A460;
+    font-family: optima;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px;
+	display: flex;
+    flex-wrap: wrap;
+}
+li a:hover {
+    background-color: white;
+    color: black;
+}
+button {
+    background-color: #DEB887;
+    margin-left: 15px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    border: 3px solid white;
+}
+button a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+button:hover {
+    border: 3px solid rgba(255, 255, 255, 0.425);
+    outline: 4px solid white;
+}
+</style>
+<div class="part-1">
+    <h1>Hello, and welcome to my Logo </h1>
+    <h3>This is my Logo</h3>
+    <img src="Pictures/the_spark_logo.svg" class="spark-logo" alt="the spark logo">
+</div>
 </body>
 
 <style>
-
-header {
-  text-align: center;
-  font-family: optima;
-  color: white;
-  background: linear-gradient(#005180, #803900);
-  padding: 100px 100px;
-  border-radius: 15px;
-  border-bottom: 4px solid black;
-  border-right: 4px solid grey;
-  position: relative;
+.part-1 {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: 	#FFE4B5;
 }
-
-#home-icon {
-    position: absolute;
-    top: 11px;
-    left: 14px;
+.part-1 h1,
+.part-1 h3 {
+    text-align-center:
+    font-family: optima;
+    font-weight: bold;
 }
-
-
-#home-icon img {
-    width: 41px;
-    height: auto;
+.spark-logo {
+    width: 200px;
+    height: auto:
+    background-color: 	#FFF0F5;
+    display: block;
 }
-
-
 </style>
 
 </html>
