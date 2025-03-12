@@ -23,8 +23,9 @@
     </div>
 </div>
 <style>
-* {
-    text-decoration: none;
+body {
+    font-family: Lucida , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: 	#FFE4B5;
 }
 img {
     width: 50px;
@@ -46,6 +47,7 @@ li {
     display: inline-block;
 }
 li a {
+    text-decoration: none;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -66,6 +68,7 @@ button {
     border: 3px solid white;
 }
 button a {
+    text-decoration: none;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -80,7 +83,7 @@ button:hover {
     <div class="spark-fact-box" id="box-1">
       <h1><span>Hi</span>, I'm <span>Spark</span></h1>
       <h2><span>MIS</span> Student + <span>Website</span> Eater</h2>
-      <p>ALright, let me introduce me name. My name is <span>Spark Chen</span>, I am currently 14 years old, but
+      <p>Alright, let me introduce me name. My name is <span>Spark Chen</span>, I am currently 14 years old, but
           very soon, I will <span>15 years old</span>. I am a person who is not happy, and I am not satisfied about this whole piece of shitty life. So yeah, bear with me.</p>
     </div>
 <div class="spark-fact-box" id="box-2"><img class="spark-selfie" src="https://github.com/SparkChen0408/spark-profile/blob/main/life-images/IMG_1260.jpg?raw=true" alt="spark-picture"></div>
@@ -88,13 +91,117 @@ button:hover {
   <div class="spark-hobbies-box">
     <h1>My hobbies:</h1>
     <ul>
-        <li>Soccer</li>
-        <li>Study</li>
-        <li>Sleep</li>
+        <li id='hobby-1'>Soccer</li>
+        <li id="hobby-2">Study</li>
+        <li id="hobby-3">Sleep</li>
     </ul>
   </div>
 </main>
 <style>
+    /* the follwoing will be about the hobby box and its border lighings */
+    /*----------------- Start --------------------*/
+    .spark-hobbies-box {
+        position: relative;
+    }
+    .spark-hobbies-box::after, .spark-hobbies-box::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background: conic-gradient(from var(--angle), transparent 25%, aqua, violet);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        padding: 5px;
+        border-radius: 20px;
+        animation: 2s spin linear infinite;
+    }
+    .spark-hobbies-box::before {
+        filter: blur(1.3rem);
+        opacity: 0.76;
+    }
+    /*----------------- End --------------------*/
+
+
+
+    /* the following will be about my spark hobby box */
+    /* start */
+    .spark-hobbies-box {
+        background:#FAF0E6;
+        margin: 40px auto;
+        width: 400px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+    .spark-hobbies-box > ul > li {
+        margin: 10px auto;
+        font-size: 25px;
+        font-weight: bold;
+        display: block;
+    }
+    #hobby-1 {
+        position: relative;
+        z-index: 1;
+        padding: 10px;
+        width: max-content
+    }
+    #hobby-1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        padding: 5px;
+        z-index: -1;
+        background-image: linear-gradient(45deg, rgb(252, 169, 90),rgb(162, 85, 124),rgb(71, 0, 157));
+        border-radius: 10px;
+    }
+    #hobby-2 {
+        position: relative;
+        z-index: 1;
+        padding: 10px;
+        width: max-content
+    }
+    #hobby-2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        padding: 5px;
+        z-index: -1;
+        background-image: linear-gradient(37deg, rgb(32, 218, 233),rgb(40, 21, 236));
+        border-radius: 10px;
+    }
+    #hobby-3 {
+        position: relative;
+        z-index: 1;
+        padding: 10px;
+        width: max-content
+    }
+    #hobby-3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        padding: 5px;
+        z-index: -1;
+        background-image: linear-gradient(145deg, rgba(232, 87, 237, 0.15) 0%,rgba(109, 137, 69, 0.15) 100%),linear-gradient(75deg, rgb(33, 138, 184),rgb(0, 241, 181));
+        border-radius: 10px;
+    }
+/*----------------- End --------------------*/
+
+/* the following will be about the box 1 you see once you open the page */
+
+
+/*----------------- Start --------------------*/
     h1 {
         position: relative;
         width: max-content;
@@ -133,7 +240,7 @@ button:hover {
         position: absolute;
         height: 100%;
         width: 100%;
-        background-image: conic-gradient(from var(--angle) , transparent 66%, #ff4546 );
+        background-image: conic-gradient(from var(--angle) , transparent 66% , #F5DEB3, 	#F4A460  );
         top: 50%;
         left: 50%;
         translate: -50% -50%;
@@ -154,6 +261,8 @@ button:hover {
             --angle: 360deg;
         }
     }
+
+    /*----------------- End --------------------*/
     .spark-selfie {
         margin: 0 auto;
         display: block;
@@ -174,153 +283,4 @@ button:hover {
     }
 </style>
 </body>
-
-<style>
-
-/*
-.spark-selfie {
-    width: 250px;
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 15px; 
-    display: block; 
-    margin: 0 auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
-}
-
-.spark-fact-box h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-.spark-fact-bpx h2 {
-    font-size: 25px;
-}
-.spark-fact-box p {
-    font-size: 20px;
-    width: 500px;
-    border: 5px dashed;
-    position: relative;
-    left: 70px;
-    padding: 10px;
-}
-
-body {
-    background-color: #F1EEEE;
-}
-
-.spark-facts-big-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  position: relative;
-  top: 120px;
-
-}
-.spark-fact-box {
-  margin: 30px;
-  height: 80%;
-  width: 80%;
-  overflow: scroll;
-  padding: 15px;
-  font-family: optima;
-  color: black;
-  box-sizing: border-box;
-  background-color: pink;
-  text-align: start;
-}
-span {
-    font-size: 60px;
-    font-weight: 900;
-    color: darkblue;
-}
-h2 span {
-    color: darkblue;
-    font-size: 25px;
-}
-p span {
-   background: yellow;
-   font-size: 20px;
-   font-weight: 800;
-   color: black;
-}
-#box-1 {
-    margin-right: 0;
-    border-right: 0;
-    padding: 20px;
-    text-align: start;
-}
-#box-2 {
-    margin-left: 0;
-    border-left: 0;
-    background-color: transparent;
-    width: 100%;
-    height: auto;
-}
-
-
-header img {
-    width: 40px;
-    height: auto;
-    margin: 0;
-    align-self: flex-start;
-}
-
-
-@keyframes MoveUpDown {
-    0%,
-    100%{
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-21px);
-    }
-}
-
-.MoveUpDown {
-    animation: MoveUpDown 2s infinite;
-    font-size: 1rem;
-}
-
-.line {
-    height: 3px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    background-color: lightgrey;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .menu-selections {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    header img {
-        margin-bottom: 10px;
-    }
-
-    main {
-        width: 95%;
-    }
-
-    h1, h2 {
-        font-size: 20px;
-    }
-}
-*/
-</style>
-
-
 </html>
