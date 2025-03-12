@@ -36,6 +36,7 @@ img {
     font-family: optima;
     padding-left: 20px;
     padding-right: 20px;
+    min-width: 450px;
 }
 .navdiv {
     display: flex;
@@ -77,9 +78,19 @@ button:hover {
     border: 3px solid rgba(255, 255, 255, 0.425);
     outline: 4px solid white;
 }
-@media (max-width: 1500px) {
-
-}
+@media (max-width: 840px){
+        .navbar {
+            width: 100%;
+        }
+        .navdiv {
+            display: flex;
+            flex-direction: column;
+        }
+        .navdiv ul  {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 </style>
 <main>
   <div class="spark-facts-big-box">
@@ -89,8 +100,10 @@ button:hover {
       <p>Alright, let me introduce me name. My name is <span>Spark Chen</span>, I am currently 14 years old, but
           very soon, I will <span>15 years old</span>. I am a person who is not happy, and I am not satisfied about this whole piece of shitty life. So yeah, bear with me.</p>
     </div>
-<div class="spark-fact-box" id="box-2"><img class="spark-selfie" src="https://github.com/SparkChen0408/spark-profile/blob/main/life-images/IMG_1260.jpg?raw=true" alt="spark-picture"></div>
+    <div class="spark-fact-box" id="box-2"><img class="spark-selfie" src="https://github.com/SparkChen0408/spark-profile/blob/main/life-images/IMG_1260.jpg?raw=true" alt="spark-picture"></div>
   </div>
+
+
   <div class="spark-hobbies-box">
     <h1>My hobbies:</h1>
     <ul>
@@ -326,7 +339,8 @@ button:hover {
 
 
 /*----------------- Start --------------------*/
-    h1 {
+
+h1 {
         position: relative;
         width: max-content;
         padding: 10px;
@@ -396,6 +410,10 @@ button:hover {
         width: 400px;
         border-radius: 30px;
         position: relative,
+    }
+    #box-1 {
+        max-width: 500px;
+        width: 400px;
     }
 </style>
 </body>
