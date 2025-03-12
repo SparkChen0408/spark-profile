@@ -77,6 +77,9 @@ button:hover {
     border: 3px solid rgba(255, 255, 255, 0.425);
     outline: 4px solid white;
 }
+@media (max-width: 1500px) {
+
+}
 </style>
 <main>
   <div class="spark-facts-big-box">
@@ -132,21 +135,92 @@ button:hover {
         max-width: 1200px;
         padding: 10px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        background: white;
+        background: rgba(255, 255, 255, 0.192);
         flex-wrap: wrap;
         border-radius: 20px;
         
     }
     .overview-boxes {
         max-width: 400px;
-        border: 3px solid rgb(188, 182, 182);
-        margin: 20px;
+        border: 3px solid 	#FFFFE0;
+        margin: 20px;  
         padding: 20px;
+        border-radius: 25px;
+        background: #F5FFFA;
+    }
+    .overview-boxes button{
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .overview-boxes button:hover {
+        outline: 4px solid rgba(165, 42, 42, 0.477)
+    }
+    /* all anout box 1 in these 3 boxes, how it looks */
+    #overview-1 {
+        box-shadow: 10px 5px #888888;
+    }
+    #overview-1 p{
+        padding-left: 30px;
+        position: relative;
+    }
+    #overview-1 p::after {
+        content:'';
+        height: 100%;
+        width: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(0deg, rgba(4, 223, 34, 0.15) 0%,rgba(167, 179, 214, 0.15) 100%),linear-gradient(90deg, rgb(210, 94, 235),rgb(219, 158, 203));
         border-radius: 25px;
     }
 
+
+    /* all about the box 2 of this 3 boxes */
+    #overview-2 {
+        box-shadow: 10px 5px #888889;
+    }
+    #overview-2 p{
+        padding-left: 30px;
+        position: relative;
+    }
+    #overview-2 p::after {
+        content:'';
+        height: 100%;
+        width: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(0deg, rgba(26, 228, 244, 0.15) 0%,rgba(50, 206, 35, 0.15) 100%),linear-gradient(90deg, rgb(44, 56, 250),rgb(88, 219, 228));    
+        border-radius: 25px;
+    }
+    /* all anout box 3 in these 3 boxes, how it looks */
+    #overview-3 {
+        box-shadow: 10px 5px #888890;
+    }
+    #overview-3 p{
+        padding-left: 30px;
+        position: relative;
+    }
+    #overview-3 p::after {
+        content:'';
+        height: 100%;
+        width: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(241deg, rgba(18, 99, 158, 0.15) 0%,rgba(28, 247, 0, 0.15) 100%),linear-gradient(194deg, rgb(223, 130, 32),rgb(244, 244, 132));
+        border-radius: 25px;
+    }
+    /* about some h2 or others in these 3 boxes */
+    #overview-1 h2,
+    #overview-2 h2,
+    #overview-3 h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
     /*----------------- End --------------------*/
     /* the follwoing will be about the hobby box and its border lighings */
     /*----------------- Start --------------------*/
@@ -272,13 +346,16 @@ button:hover {
     }
     #box-1 {
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
         background: #FAF0E6;
         color: rgb(19, 19, 19);
-        margin: 40px auto;
+        margin: 30px auto;
         width: 500px;
         padding: 20px;
         border-radius: 20px;
         box-sizing: border-box;
+
     }
     @property --angle{
         syntax: "<angle>";
@@ -319,17 +396,6 @@ button:hover {
         width: 400px;
         border-radius: 30px;
         position: relative,
-    }
-    .spark-selfie::after {
-        content:'';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
-        height: 100%;
-        width: 100%;
-        background: blue;
-        
     }
 </style>
 </body>
