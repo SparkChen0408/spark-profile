@@ -8,7 +8,10 @@
     <title>the spark profile</title>
 </head>
 <body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@300;400;600&family=Big+Shoulders+Inline:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&family=Emblema+One&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
 
+</style>
 <div class="navbar">
     <div class="navdiv">
         <div><a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" class="spark-logo" alt="the spark logo"></a></div>
@@ -18,7 +21,6 @@
             <li><a href="spark_intro.html">Intro</a></li>
             <li><a href="spark_logo.html">Logo</a></li>
             <li><a href="resume.html">Resume</a></li>
-	    <li><a href="spark_fun.html">Fun</a></li>
             <button><a href="#">Cloud Me</a></button>        
         </ul>
     </div>
@@ -139,8 +141,83 @@ button:hover {
         <button>Find out more</button>
     </div>
   </div>
+  <!-- the following will be the html of the infinite scroll, cool effect huh! -->
+  <div class="infinite-scroll-1">
+    <ul >
+        <li id="soccer">Soccer</li>
+        <li id="study">Study</li>
+        <li id="sleep">Sleep</li>
+        <li id="spark">Spark</li>
+        <li id="shine">Shine</li> 
+    </ul>
+
+    <ul aria-hidden="true">
+        <li id="soccer">Soccer</li>
+        <li id="study">Study</li>
+        <li id="sleep">Sleep</li>
+        <li id="spark">Spark</li>
+        <li id="shine">Shine</li> 
+    </ul>
+
+  </div>
 </main>
 <style>
+    /* the following will be about my cool infinte scroll */
+    .infinite-scroll-1 {
+        margin: auto 110px;
+        font-size: 20px;
+        padding-block: 8px;
+        border-block: 2px solid black;
+        user-select: none;
+        overflow: hidden;
+        display: flex;
+        --gap: 100px;
+        gap: var(--gap);
+
+    }
+    .infinite-scroll-1 ul {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        min-width: 100%;
+        flex-shrink: 0;
+        gap: var(--gap);
+        animation: scroll 10s linear infinite;
+    }
+
+    .infinite-scroll-1:hover ul {
+        animation-play-state: paused;
+    }
+
+    @keyframes scroll{
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+    /* .infinite-scroll-1 ul:first-child {
+        background-color: #F4A460;
+    }
+    .infinite-scroll-1 ul:last-child {
+        background-color: pink;
+    } */
+    #study, #spark {
+        font-family: merriweather;
+    }
+    #soccer {
+        font-size: 25px;
+        font-weight: bold;
+        font-family:  "Big Shoulders Stencil";
+    }
+    #sleep {
+        font-weight: bold;
+        font-family: "Emblema One";
+    }
+    #shine {
+        font-weight: bold;
+        font-family: "Playfair Display";
+    }
+
+
     /* the following will be the style for the spark-website-overview-boxes */
     /*----------------- Start --------------------*/
 
