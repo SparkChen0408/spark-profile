@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fake</title>
+</head>
+<body>
+    <style>
+body {
+    background: 	#FFF0F6;
+}
+h1 {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5em;
+}
+.main-container {
+    background: white;
+    margin: 20px 30px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+.main-container::after {
+    content:'';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient(135deg, rgb(245, 177, 77),rgb(237, 53, 115));
+    padding: 5px;
+    border-radius: 20px;
+}
+#countNum {
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-image: linear-gradient(0deg, rgba(4, 223, 34, 0.15) 0%,rgba(167, 179, 214, 0.15) 100%),linear-gradient(90deg, rgb(210, 94, 235),rgb(219, 158, 203));   
+    border: 1px solid rgb(188, 46, 122);
+    margin-right: 20px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.Btn:hover {
+    background-image: linear-gradient(0deg, rgba(216, 28, 10, 0.3) 0%,rgba(255, 189, 248, 0.3) 100%),linear-gradient(90deg, rgb(208, 18, 218),rgb(197, 126, 179));
+}
+    </style>
+    <h1>The Counting Machine</h1>
+    <div class="main-container">
+        <label id="countNum">0</label>
+        <div class="btnContainer">
+            <button class="Btn" id="decreaseBtn">Decrease</button>
+            <button class="Btn" id="resetBtn">Reset</button>
+            <button class="Btn" id="increaseBtn">Increase</button>
+        </div>
+    </div>
+    <script>
+const decreaseBtn = document.getElementById("decreaseBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const countNum = document.getElementById("countNum");
+let count = 0;
 
+decreaseBtn.onclick = function(){
+    count--;
+    countNum.textContent = count;
+
+}
+increaseBtn.onclick = function(){
+    count++;
+    countNum.textContent = count;
+    
+}
+resetBtn.onclick = function(){
+    count = 0;
+    countNum.textContent = count;
+}
+    </script>
+</body>
+</html>
