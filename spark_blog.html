@@ -1,19 +1,30 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" type="x-icon" href="Pictures/web_logo_2.jpg">
+    <!-- 
+	📌 LIST OF IMPORTED GOOGLE FONTS:
+	1️⃣ Big Shoulders Stencil
+	2️⃣ Big Shoulders Inline
+	3️⃣ Dancing Script
+	4️⃣ Emblema One
+	5️⃣ Playfair Display
+	6️⃣ Merriweather
+    -->
+    <link rel="shortcut icon" type="x-icon" href="icons/web_logo_2.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>the spark profile</title>
+    <title>Spark's Website</title>
 </head>
 <body>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@300;400;600&family=Big+Shoulders+Inline:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&family=Emblema+One&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
-    
-    </style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@300;400;600&family=Big+Shoulders+Inline:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&family=Emblema+One&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+</style>
 <div class="navbar">
     <div class="navdiv">
-        <div><a href="spark_logo.html"><img src="Pictures/the_spark_logo.svg" class="spark-logo" alt="the spark logo"></a></div>
+        <div><a href="spark_logo.html"><img src="icons/the_spark_logo.svg" class="spark-logo" alt="the spark logo"></a></div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="spark_blog.html">Blogs</a></li>
@@ -59,10 +70,12 @@ li a {
     padding: 10px;
 	display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
 }
 li a:hover {
     background-color: white;
     color: black;
+    box-shadow:  1px 1px 20px pink;
 }
 button {
     background-color: #DEB887;
@@ -79,6 +92,7 @@ button a {
 }
 button:hover {
     border: 3px solid rgba(255, 255, 255, 0.425);
+    outline: 4px solid white;
 }
 @media (max-width: 840px){
         .navbar {
