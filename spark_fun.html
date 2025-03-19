@@ -134,29 +134,37 @@ button:hover {
     </div>
 </div>
 <style>
-	.main-1 {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-        margin: 20px auto;
-        gap: 20px;
-	}
-	.game {
-		padding: 20px;
-		border: 2px solid white;
-		background: rgba(255, 255, 255, 0.517);
-        border-radius: 20px;
-	}
-    .game h1,
-    {
+.main-1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 80%;
+	margin: 20px auto;
+	gap: 20px;
+}
+.game {
+	padding: 20px;
+	border: 2px solid white;
+	background: rgba(255, 255, 255, 0.517);
+	border-radius: 20px;
+	max-width: 400px;
+}
+    .game h1 {
         color: pink;
-    }
+
+}
     .game a {
     	text-decoration: none;
-    }
+        color: black;
+}
     p, label {
-        line-height: 1.6;
-    }
+        line-height: 1.5;
+}
+    .game:hover {
+        border: 2px solid rgba(255, 255, 255, 0.425);
+        outline: 4px solid white;
+}
 </style>
 
 </body>
