@@ -109,7 +109,7 @@ button:hover {
     }
 </style>
 <main>
-  <div class="spark-facts-big-box">
+  <div class="box">
     <div class="spark-fact-box" id="box-1">
       <h1><span>Hi</span>, I'm <span>Spark</span></h1>
       <h2><span>MIS</span> Student + <span>Website</span> Eater</h2>
@@ -128,7 +128,7 @@ button:hover {
         <li id="hobby-3">Sleep</li>
     </ul>
   </div>
-  <div class="spark-website-overview-boxes">
+  <div class="box">
     <div class="overview-boxes" id="overview-1">
         <h2>Blogs</h2>
         <p>Blogs are a important part of my whole website, it was one of my aspirations
@@ -171,10 +171,38 @@ button:hover {
         <li id="spark">Spark</li>
         <li id="shine">Shine</li> 
     </ul>
-
   </div>
+
+  <!--  the music part now -->
+    <div class="box" id="music">
+        <h1>My Favourite Musics</h1>
+        <div>
+            <p>'Often' by the Weeknd</p>
+            <audio controls>
+                <source src="../../music/often.mp3" type="audio/mpeg">
+            </audio>    
+        </div>
+        <div>
+            <p>'I don't wanna live forever' by Taylor Swift</p>
+            <audio controls>
+                <source src="../../music/taylor.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
 </main>
 <style>
+    /* the following will be about the music section in my website. yep */
+    /*----------------- Start --------------------*/
+    #music {
+        max-width: 500px;
+        gap: 30px;
+        display: flex;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+
     /* the following will be about my cool infinte scroll */
     .infinite-scroll-1 {
         margin: auto 110px;
@@ -234,7 +262,7 @@ button:hover {
     /* the following will be the style for the spark-website-overview-boxes */
     /*----------------- Start --------------------*/
 
-    .spark-website-overview-boxes {
+    .box {
         margin: 50px auto;
         max-width: 1200px;
         padding: 10px;
