@@ -94,7 +94,7 @@ button:hover {
     border: 3px solid rgba(255, 255, 255, 0.425);
     outline: 4px solid white;
 }
-@media (max-width: 840px){
+@media  all and (max-width: 840px){
         .navbar {
             width: 100%;
         }
@@ -118,15 +118,6 @@ button:hover {
     </div>
     <div class="spark-fact-box" id="box-2"><img class="spark-selfie" src="https://github.com/SparkChen0408/spark-profile/blob/main/Pictures/spark_selfie_1.jpg?raw=true" alt="spark-picture"></div>
   </div>
-<style>
-    @media all and(max-width: 774px){
-        #intro-box {
-            width: 100vw;
-            position: relative;
-            left: 50px;
-        }
-    }
-</style>
 
   <div class="spark-hobbies-box">
     <h1>My hobbies:</h1>
@@ -253,13 +244,12 @@ button:hover {
         background-color: var(--clr-semiWhite);
         width: 100%;
         gap: 30px;
-        flex-direction: column;
+        display: flex;
 
     }
     #whole_pic_box {
         display: flex;
         justify-content: space-evenly;
-        flex-direction: column;
         width: 100%;
         padding: 30px;
         flex-wrap: wrap;
@@ -286,30 +276,8 @@ button:hover {
         filter: contrast(1.05) brightness(1.1) saturate(1.15) blur(0.3px);
 
         }
-    @media all and (max-width: 1200px){
-        .box {
-            justify-self: center;
-            width: 100vw;
-            padding: auto 50px;
-        }
-    }
-    @media all and (max-width: 500px){
-        .box {
-            width: 100vw;
-            justify-self: center;
 
-        }
-        .pic_box {
-            justify-self: center;
-        }
-        #whole_pic_box {
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-
-        }
-    }
+   
 </style>
 
 
@@ -385,7 +353,7 @@ button:hover {
         max-width: 1200px;
         padding: 10px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         background: rgba(255, 255, 255, 0.192);
         flex-wrap: wrap;
@@ -607,7 +575,7 @@ h1 {
         background: #FAF0E6;
         color: rgb(19, 19, 19);
         margin: 30px auto;
-        width: 500px;
+        width: 80%;
         padding: 20px;
         border-radius: 20px;
         box-sizing: border-box;
@@ -650,7 +618,7 @@ h1 {
         margin: 30px;
         display: block;
         min-width: 200px;
-        width: 80%;
+        width: 300px;
         border-radius: 30px;
         justify-self: center;
     }
