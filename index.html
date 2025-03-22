@@ -214,21 +214,27 @@ button:hover {
 <!-- Family Pictures -->
 
     <div class="box" id="photo_box">
-        <h1>My Biological Brothers💪</h1>
-        <div class="pic_box">
-            <img src="../../Pictures/9a4a2eb82e5fe8dafb72edcfcb420036.png">
-            <h3>Big Bro: Charlie</h3>
-            <button>Find out more</button>
+        <div>
+            <h1>My Biological Brothers💪</h1>
         </div>
-        <div class="pic_box">
-            <img src="../../Pictures/Spark_young_pic_1.jpg">
-            <h3>Spark, Check it out</h3>
-            <button>Find out more</button>
-        </div>
-        <div class="pic_box">
-            <img src="../../Pictures/Calvin_pic_1.jpg">
-            <h3>My Little Bro, Calvin</h3>
-            <button>Find out more</button>
+
+        <div id="whole_pic_box">
+            <div class="pic_box">
+                <img src="../../Pictures/9a4a2eb82e5fe8dafb72edcfcb420036.png">
+                <h3>Big Bro: Charlie</h3>
+                <button>Find out more</button>
+            </div>
+            <div class="pic_box">
+                <img src="../../Pictures/Spark_young_pic_1.jpg">
+                <h3>Spark, Check it out</h3>
+                <button>Find out more</button>
+            </div>
+            <div class="pic_box">
+                <img src="../../Pictures/Calvin_pic_1.jpg">
+                <h3>My Little Bro, Calvin</h3>
+                <button>Find out more</button>
+            </div>
+
         </div>
     </div>
 <style>
@@ -239,6 +245,15 @@ button:hover {
         background-color: var(--clr-semiWhite);
         width: 100%;
         gap: 30px;
+        flex-direction: column;
+
+    }
+    #whole_pic_box {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 100%;
+        padding: 30px;
     }
     .pic_box{
         display: flex;
@@ -257,7 +272,11 @@ button:hover {
         border-radius: 5px;
         margin: 20px auto;
         margin-bottom: 0px;
-    }
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        border: 2px solid black;
+        filter: contrast(1.05) brightness(1.1) saturate(1.15) blur(0.3px);
+
+        }
 </style>
 
 
@@ -338,6 +357,9 @@ button:hover {
         background: rgba(255, 255, 255, 0.192);
         flex-wrap: wrap;
         border-radius: 20px;
+        /* this follwoing one single line is the game changer of this website, remember I copied it from getcssscan.com, and I changed the 0.35 to 0.34 in rgba(10, 37, 64, 0.34) */
+        --best-inset-box-shadow-ever: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.34) 0px -2px 6px 0px inset;
+        box-shadow: var(--best-inset-box-shadow-ever);
         
     }
     .overview-boxes {
@@ -590,7 +612,7 @@ h1 {
 
     /*----------------- End --------------------*/
     .spark-selfie {
-        margin: 0 auto;
+        margin: 30px;
         display: block;
         width: 400px;
         border-radius: 30px;
