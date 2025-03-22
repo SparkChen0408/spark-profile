@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,6 +127,7 @@ button:hover {
     </ul>
   </div>
   <div class="box">
+    <h1>Something you might want to know</h1>
     <div class="overview-boxes" id="overview-1">
         <h2>Blogs</h2>
         <p>Blogs are a important part of my whole website, it was one of my aspirations
@@ -153,6 +152,8 @@ button:hover {
         </p>
         <button>Find out more</button>
     </div>
+
+
   </div>
   <!-- the following will be the html of the infinite scroll, cool effect huh! -->
   <div class="infinite-scroll-1">
@@ -175,17 +176,33 @@ button:hover {
 
   <!--  the music part now -->
     <div class="box" id="music">
-        <h1>My Favourite Musics</h1>
+        <h1>Weekly Refresh</h1>
+
         <div>
             <p>'Often' by the Weeknd</p>
-            <audio controls>
+            <audio controls loop>
                 <source src="../../music/often.mp3" type="audio/mpeg">
             </audio>    
         </div>
+
         <div>
             <p>'I don't wanna live forever' by Taylor Swift</p>
-            <audio controls>
+            <audio controls loop>
                 <source src="../../music/taylor.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div>
+            <p>'Acquainted' by the Weeknd</p>
+            <audio controls loop>
+                <source src="../../music/Acquainted by the Weeknd.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div>
+            <p>'That's so True' by Gracie</p>
+            <audio controls loop>
+                <source src="../../music/Thats So True by Gracie.mp3" type="audio/mpeg">
             </audio>
         </div>
     </div>
@@ -235,12 +252,7 @@ button:hover {
             transform: translateX(calc(-100% - var(--gap)));
         }
     }
-    /* .infinite-scroll-1 ul:first-child {
-        background-color: #F4A460;
-    }
-    .infinite-scroll-1 ul:last-child {
-        background-color: pink;
-    } */
+
     #study, #spark {
         font-family: merriweather;
     }
