@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,6 +128,8 @@ button:hover {
         <li id="hobby-3">Sleep</li>
     </ul>
   </div>
+
+  <!-- little more info, add a more bone for this webpage -->
   <div class="box">
     <h1>Something you might want to know</h1>
     <div class="overview-boxes" id="overview-1">
@@ -206,6 +210,56 @@ button:hover {
             </audio>
         </div>
     </div>
+    
+<!-- Family Pictures -->
+
+    <div class="box" id="photo_box">
+        <h1>My Biological Brothers💪</h1>
+        <div class="pic_box">
+            <img src="../../Pictures/9a4a2eb82e5fe8dafb72edcfcb420036.png">
+            <h3>Big Bro: Charlie</h3>
+            <button>Find out more</button>
+        </div>
+        <div class="pic_box">
+            <img src="../../Pictures/Spark_young_pic_1.jpg">
+            <h3>Spark, Check it out</h3>
+            <button>Find out more</button>
+        </div>
+        <div class="pic_box">
+            <img src="../../Pictures/Calvin_pic_1.jpg">
+            <h3>My Little Bro, Calvin</h3>
+            <button>Find out more</button>
+        </div>
+    </div>
+<style>
+    :root {
+        --clr-semiWhite: #f3f1ee;
+    }
+    #photo_box {
+        background-color: var(--clr-semiWhite);
+        width: 100%;
+        gap: 30px;
+    }
+    .pic_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pic_box button {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .pic_box img {
+        object-fit: cover;
+        max-width: 500px;
+        min-width: 200px;
+        border-radius: 5px;
+        margin: 20px auto;
+        margin-bottom: 0px;
+    }
+</style>
+
 
 </main>
 <style>
