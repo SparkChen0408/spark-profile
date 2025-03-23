@@ -51,6 +51,7 @@ img {
     padding-left: 20px;
     padding-right: 20px;
     min-width: 450px;
+    width: 100%;
 }
 .navdiv {
     display: flex;
@@ -145,7 +146,19 @@ button:hover {
             am not a normal soul. I was sent from the <span>Universe</span> and i will be send back.
             It is just a matter of time. Where I come from and why am I here. I will know LATER.
         </p>
-        <button>Find out more</button>
+        <button class="open-button button" data-modal="modal1">Find out more</button>
+
+        <dialog  class="modal" id="modal1">
+            <h3>Still in Construction</h3>
+            <p>
+                lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                re eu fugiat nulla pariatur.
+            </p>
+            <button class="button close-button">Close</button>
+        </dialog>
+
+
     </div>
     <div class="overview-boxes" id="overview-3">
         <h2>Others</h2>
@@ -153,10 +166,60 @@ button:hover {
             life for me isn't crystal stair. It has tacks in it. I will mess a lot of things up 
             and bro I am just trying to make it more appealing. So yeah..expect the unexpect.
         </p>
-        <button>Find out more</button>
+        <button class="open-button button" data-modal="modal2">Find out more</button>
+
+        <dialog  class="modal" id="modal2">
+            <h3>Still in Construction</h3>
+            <p>
+                lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                re eu fugiat nulla pariatur.
+            </p>
+            <button class="button close-button">Close</button>
+        </dialog>
+
+
     </div>
 
+    <script>
+        const openBtns = document.querySelectorAll('.open-button');
+        const closeBtns = document.querySelectorAll('.close-button');
+        
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modalId = btn.dataset.modal;
+                const modal = document.getElementById(modalId);
+                modal.showModal();
+            });
+        });
+        
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modal = btn.closest('.modal');
+                modal.close();
+            });
+        });
+        
+    </script>
+    <style>
+    h1, 
+    h2, 
+    h3 {
+    font-size: 40px;
+    margin-bottom: 0.5px;
+}
+.modal {
+    padding: 30px;
+    max-width: 50ch;
+    border: 0;
+    border-radius: 10px;
+}
+.modal::backdrop {
+    background: linear-gradient(50deg, rgb(86, 86, 83), black);
+    opacity: .66 ;
 
+}
+    </style>
   </div>
   <!-- the following will be the html of the infinite scroll, cool effect huh! -->
   <div class="infinite-scroll-1">
@@ -214,7 +277,7 @@ button:hover {
 
     <div class="box" id="photo_box">
         <div>
-            <h1>My Biological Brothers💪</h1>
+            <h1>We Brothers💪</h1>
         </div>
 
         <div id="whole_pic_box">
@@ -276,7 +339,6 @@ button:hover {
         filter: contrast(1.05) brightness(1.1) saturate(1.15) blur(0.3px);
 
         }
-
    
 </style>
 
@@ -349,20 +411,26 @@ button:hover {
     /*----------------- Start --------------------*/
 
     .box {
-        margin: 50px auto;
-        max-width: 1200px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.192);
-        flex-wrap: wrap;
-        border-radius: 20px;
-        /* this follwoing one single line is the game changer of this website, remember I copied it from getcssscan.com, and I changed the 0.35 to 0.34 in rgba(10, 37, 64, 0.34) */
-        --best-inset-box-shadow-ever: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.34) 0px -2px 6px 0px inset;
-        box-shadow: var(--best-inset-box-shadow-ever);
-        
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.501);
+    flex-wrap: wrap;
+    border-radius: 20px;
+    /* this follwoing one single line is the game changer of this website, remember I copied it from getcssscan.com, and I changed the 0.35 to 0.34 in rgba(10, 37, 64, 0.34) */
+    --best-inset-box-shadow-ever: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.34) 0px -2px 6px 0px inset;
+    box-shadow: var(--best-inset-box-shadow-ever);
+}
+
+@media (max-width: 500px) {
+    .box {
+        max-width: 90%;
+        margin: 20px auto;
     }
+}
     .overview-boxes {
         max-width: 400px;
         border: 3px solid 	#FFFFE0;
