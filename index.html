@@ -22,6 +22,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@300;400;600&family=Big+Shoulders+Inline:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&family=Emblema+One&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
 
 </style>
+
 <div class="navbar">
     <div class="navdiv">
         <div><a href="spark_logo.html"><img src="icons/the_spark_logo.svg" class="spark-logo" alt="the spark logo"></a></div>
@@ -38,20 +39,48 @@
 </div>
 <style>
 body {
-    font-family: Lucida , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: helvetica , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: 	#FFE4B5;
 }
 img {
     width: 50px;
     height: auto;
 }
-.navbar {
+/* Remember the following line, cuz this fat-ass gave me
+my first lecture of debugging.  */
+
+/* .navbar {
     background-color: 	#F4A460;
     font-family: optima;
     padding-left: 20px;
     padding-right: 20px;
     min-width: 450px;
+} */
+
+/* Now I will recreate the fat ass in a clean and muscular guy */
+a {
+    text-decoration: none;
+    color: black;
 }
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+button:hover {
+    background-image: var(--nice-background);
+
+}
+.navbar {
+    background: #F4A460;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+} 
+
 .navdiv {
     display: flex;
     align-items: center;
@@ -74,29 +103,14 @@ li a {
 }
 li a:hover {
     background-color: white;
-    color: black;
+    color: #F4A460;
     box-shadow:  1px 1px 20px pink;
 }
-button {
-    background-color: #DEB887;
-    margin-left: 15px;
-    padding: 10px 15px;
-    border-radius: 18px;
-    border: 3px solid white;
-}
-button a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
-button:hover {
-    border: 3px solid rgba(255, 255, 255, 0.425);
-    outline: 4px solid white;
-}
-@media (max-width: 840px){
+
+
+@media (max-width: 450px){
         .navbar {
-            width: 100%;
+            max-width: 100%;
         }
         .navdiv {
             display: flex;
@@ -108,6 +122,7 @@ button:hover {
         }
     }
 </style>
+
 <main>
   <div class="box" id="intro-box">
     <div class="spark-fact-box" id="box-1">
@@ -119,7 +134,7 @@ button:hover {
     <div class="spark-fact-box" id="box-2"><img class="spark-selfie" src="https://github.com/SparkChen0408/spark-profile/blob/main/Pictures/spark_selfie_1.jpg?raw=true" alt="spark-picture"></div>
   </div>
 
-  <div class="spark-hobbies-box">
+  <div class="spark-hobbies-box box music" id="hb-box">
     <h1>My hobbies:</h1>
     <ul>
         <li id='hobby-1'>Soccer</li>
@@ -127,9 +142,16 @@ button:hover {
         <li id="hobby-3">Sleep</li>
     </ul>
   </div>
+  <style>
+    #hb-box {
+        border: 3px solid black;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+  </style>
 
   <!-- little more info, add a more bone for this webpage -->
-  <div class="box">
+  <div class="box" id="OV-box">
     <h1>Something you might want to know</h1>
     <div class="overview-boxes" id="overview-1">
         <h2>Blogs</h2>
@@ -201,23 +223,24 @@ button:hover {
         
     </script>
     <style>
-    h1, 
-    h2, 
-    h3 {
-    font-size: 40px;
-    margin-bottom: 0.5px;
-}
-.modal {
-    padding: 30px;
-    max-width: 50ch;
-    border: 0;
-    border-radius: 10px;
-}
-.modal::backdrop {
-    background: linear-gradient(50deg, rgb(86, 86, 83), black);
-    opacity: .66 ;
 
-}
+        img{
+            max-width: 500px;
+            width: 50%;
+            height: auto;
+        }
+
+        .modal {
+            padding: 30px;
+            max-width: 50ch;
+            border: 0;
+            border-radius: 10px;
+        }
+        .modal::backdrop {
+            background: linear-gradient(50deg, rgb(86, 86, 83), black);
+            opacity: .66 ;
+
+        }
     </style>
   </div>
   <!-- the following will be the html of the infinite scroll, cool effect huh! -->
@@ -275,24 +298,22 @@ button:hover {
 <!-- Family Pictures -->
 
     <div class="box" id="photo_box">
-        <div>
-            <h1>We Brothers💪</h1>
-        </div>
-
+        <h1>We Brothers💪</h1>
+ 
         <div id="whole_pic_box">
             <div class="pic_box">
                 <img src="../../Pictures/9a4a2eb82e5fe8dafb72edcfcb420036.png">
-                <h3>Big Bro: Charlie</h3>
+                <p>Big Bro: Charlie</p>
                 <button>Find out more</button>
             </div>
             <div class="pic_box">
                 <img src="../../Pictures/Spark_young_pic_1.jpg">
-                <h3>Spark, Check it out</h3>
+                <p>Spark, Check it out</p>
                 <button>Find out more</button>
             </div>
             <div class="pic_box">
                 <img src="../../Pictures/Calvin_pic_1.jpg">
-                <h3>My Little Bro, Calvin</h3>
+                <p>My Little Bro, Calvin</p>
                 <button>Find out more</button>
             </div>
 
@@ -301,13 +322,23 @@ button:hover {
 <style>
     :root {
         --clr-semiWhite: #f3f1ee;
+        --main-box-color: #FAF0E6;
+        --best-inset-box-shadow-ever: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.34) 0px -2px 6px 0px inset;
+        --default-line-height: 150%;
+        --default-font-size: 16px;
+        --nice-background: repeating-linear-gradient(90deg, rgba(198, 198, 198,0.05) 0px, rgba(198, 198, 198,0.05) 1px,transparent 1px, transparent 5px),repeating-linear-gradient(0deg, rgba(198, 198, 198,0.05) 0px, rgba(198, 198, 198,0.05) 1px,transparent 1px, transparent 5px),repeating-linear-gradient(0deg, rgba(198, 198, 198,0.06) 0px, rgba(198, 198, 198,0.06) 1px,transparent 1px, transparent 15px),repeating-linear-gradient(90deg, rgba(198, 198, 198,0.06) 0px, rgba(198, 198, 198,0.06) 1px,transparent 1px, transparent 15px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
     }
     #photo_box {
         background-color: var(--clr-semiWhite);
         width: 100%;
         gap: 30px;
         display: flex;
-
+        flex-wrap: wrap;
+    }
+    #photo_box h1 {
+        text-align: center;
+        margin: 20px auto;
     }
     #whole_pic_box {
         display: flex;
@@ -321,11 +352,7 @@ button:hover {
         flex-direction: column;
         align-items: center;
     }
-    .pic_box button {
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-    }
+
     .pic_box img {
         object-fit: cover;
         max-width: 500px;
@@ -334,11 +361,11 @@ button:hover {
         margin: 20px auto;
         margin-bottom: 0px;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
-        border: 2px solid black;
+        border: 1px solid black;
         filter: contrast(1.05) brightness(1.1) saturate(1.15) blur(0.3px);
 
         }
-   
+
 </style>
 
 
@@ -350,8 +377,13 @@ button:hover {
         max-width: 500px;
         gap: 30px;
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 30px auto;
         padding: 20px;
         box-sizing: border-box;
+        border: 2px solid black;
     }
 
 
@@ -410,42 +442,53 @@ button:hover {
     /*----------------- Start --------------------*/
 
     .box {
-    margin: 50px auto;
-    max-width: 1200px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.501);
-    flex-wrap: wrap;
-    border-radius: 20px;
-    /* this follwoing one single line is the game changer of this website, remember I copied it from getcssscan.com, and I changed the 0.35 to 0.34 in rgba(10, 37, 64, 0.34) */
-    --best-inset-box-shadow-ever: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.34) 0px -2px 6px 0px inset;
-    box-shadow: var(--best-inset-box-shadow-ever);
-}
+        margin: 50px auto;
+        max-width: 1200px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.501);
+        flex-wrap: wrap;
+        border-radius: 20px; 
+        box-shadow: var(--best-inset-box-shadow-ever);
+        box-sizing: border-box;
+        line-height: var(--default-line-height);
+} 
 
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
     .box {
-        max-width: 90%;
-        margin: 20px auto;
+        margin: 30px auto;
     }
+    #music {
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #overview-1,
+    #overview-2,
+    #overview-3 {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    
 }
+    #OV-box {
+
+        padding: 20px;
+        box-sizing: border-box;
+    }
     .overview-boxes {
+        border: 2px solid black;
         max-width: 400px;
-        border: 3px solid 	#FFFFE0;
-        margin: 20px;  
+        margin: 20px auto;  
         padding: 20px;
         border-radius: 25px;
-        background: #F5FFFA;
+        background: var(--main-box-color);
     }
-    .overview-boxes button{
-        color: white;
-        font-size: 15px;
-        font-weight: bold;
-    }
-    .overview-boxes button:hover {
-        outline: 4px solid rgba(165, 42, 42, 0.477)
-    }
+
     /* all anout box 1 in these 3 boxes, how it looks */
     #overview-1 {
         box-shadow: 10px 5px #888888;
@@ -514,7 +557,7 @@ button:hover {
 
     /* the follwoing will be about the hobby box and its border lighings */
     /*----------------- Start --------------------*/
-    .spark-hobbies-box {
+    /* .spark-hobbies-box {
         position: relative;
     }
     .spark-hobbies-box::after, .spark-hobbies-box::before {
@@ -534,7 +577,7 @@ button:hover {
     .spark-hobbies-box::before {
         filter: blur(1.3rem);
         opacity: 0.76;
-    }
+    } */
     /*----------------- End --------------------*/
 
 
@@ -542,13 +585,8 @@ button:hover {
     /* the following will be about my spark hobby box */
     /* start */
     .spark-hobbies-box {
-        background:#FAF0E6;
-        margin: 40px auto;
-        width: 400px;
-        text-align: center;
-        padding: 20px;
-        border-radius: 20px;
-        box-sizing: border-box;
+        max-width: 500px;
+
     }
     .spark-hobbies-box > ul > li {
         margin: 10px auto;
@@ -618,11 +656,16 @@ button:hover {
 /*----------------- Start --------------------*/
 
 h1 {
-        position: relative;
-        width: max-content;
-        padding: 10px;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        letter-spacing: 1.5px;
+        line-height: var(--default-line-height);
+        font-size: 40px;
+        margin: auto 20px;
     }
-    h1::after {
+    /* h1::after {
         content: '';
         position: absolute;
         width: 100%;
@@ -631,7 +674,7 @@ h1 {
         left: 0;
         bottom: 0;
         border-radius: 20px;
-    }
+    } */
     span {
         color: rgb(68, 0, 255);
     }
@@ -648,12 +691,13 @@ h1 {
         box-sizing: border-box;
 
     }
-    @property --angle{
+
+    /* @property --angle{
         syntax: "<angle>";
         initial-value: 0deg;
         inherits: false;
-    }
-    #box-1::after, #box-1::before {
+    } */
+    /* #box-1::after, #box-1::before {
         content: '';
         position: absolute;
         height: 100%;
@@ -678,7 +722,7 @@ h1 {
         to{
             --angle: 360deg;
         }
-    }
+    } */
 
     /*----------------- End --------------------*/
     .spark-selfie {
