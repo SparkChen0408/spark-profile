@@ -15,16 +15,17 @@
     <link rel="shortcut icon" type="x-icon" href="icons/web_logo_2.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spark Blogs</title>
+    <title>Spark's resume</title>
 </head>
 <body>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@300;400;600&family=Big+Shoulders+Inline:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&family=Emblema+One&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
 
 </style>
+
 <div class="navbar">
     <div class="navdiv">
-        <div><a href="spark_logo.html"><img src="icons/the_spark_logo.svg" class="spark-logo" alt="the spark logo"></a></div>
+        <div><a href="spark_logo.html"><img src="../icons/the_spark_logo.svg" class="spark-logo" alt="the spark logo"></a></div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="spark_blog.html">Blogs</a></li>
@@ -38,20 +39,58 @@
 </div>
 <style>
 body {
-    font-family: Lucida , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: helvetica , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: 	#FFE4B5;
 }
-img {
+:root {
+        --clr-semiWhite: #f3f1ee;
+        --main-box-color: #FAF0E6;
+        --best-inset-box-shadow-ever: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.34) 0px -2px 6px 0px inset;
+        --default-line-height: 150%;
+        --default-font-size: 16px;
+        --nice-background: repeating-linear-gradient(90deg, rgba(198, 198, 198,0.05) 0px, rgba(198, 198, 198,0.05) 1px,transparent 1px, transparent 5px),repeating-linear-gradient(0deg, rgba(198, 198, 198,0.05) 0px, rgba(198, 198, 198,0.05) 1px,transparent 1px, transparent 5px),repeating-linear-gradient(0deg, rgba(198, 198, 198,0.06) 0px, rgba(198, 198, 198,0.06) 1px,transparent 1px, transparent 15px),repeating-linear-gradient(90deg, rgba(198, 198, 198,0.06) 0px, rgba(198, 198, 198,0.06) 1px,transparent 1px, transparent 15px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+    }
+.spark-logo {
+    max-width: 50px;
     width: 50px;
     height: auto;
 }
-.navbar {
+/* Remember the following line, cuz this fat-ass gave me
+my first lecture of debugging.  */
+
+/* .navbar {
     background-color: 	#F4A460;
     font-family: optima;
     padding-left: 20px;
     padding-right: 20px;
     min-width: 450px;
+} */
+
+/* Now I will recreate the fat ass in a clean and muscular guy */
+a {
+    text-decoration: none;
+    color: black;
 }
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+button:hover {
+    background-image: var(--nice-background);
+
+}
+.navbar {
+    background: #F4A460;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+} 
+
 .navdiv {
     display: flex;
     align-items: center;
@@ -74,29 +113,14 @@ li a {
 }
 li a:hover {
     background-color: white;
-    color: black;
+    color: #F4A460;
     box-shadow:  1px 1px 20px pink;
 }
-button {
-    background-color: #DEB887;
-    margin-left: 15px;
-    padding: 10px 15px;
-    border-radius: 18px;
-    border: 3px solid white;
-}
-button a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
-button:hover {
-    border: 3px solid rgba(255, 255, 255, 0.425);
-    outline: 4px solid white;
-}
-@media (max-width: 840px){
+
+
+@media (max-width: 450px){
         .navbar {
-            width: 100%;
+            max-width: 100%;
         }
         .navdiv {
             display: flex;
@@ -126,7 +150,7 @@ button:hover {
             
             <a href="blogs/blog-2.html">
                 <button >
-                    <img src="Pictures/st_Moritz_pic_1.jpg" alt="a snowy hill">
+                    <img src="Pictures/st_Moritz_pic_1.jpg" alt=" a snowy hill">
                     <h1>This is my St.Moritz Ski Week Blog: <b>1</b></h1>
                     <p><b>Description: </b>This is my first day of this cool new 
                     journey. This is the coolest white mountain for Skiing in this Region.
@@ -137,7 +161,7 @@ button:hover {
         <div class="blog-post">
             <a href="blogs/blog-3.html">
                 <button >
-                    <img src="Pictures/st_Moritz_pic_2.jpg" alt="Calvin Snowing">
+                    <img src="Pictures/st_Moritz_pic_2.jpg" alt=" Calvin Snowing">
                     <h1>This is my St.Moritz Ski Week Blog: <b>2</b></h1>
                     <p><b>Description: </b>You have probably guessed, the second time of 
                     doing something not familiar with will not be <i>cool</i>. However, you always
@@ -155,6 +179,7 @@ button:hover {
 
 <style>
 .blogs{
+   
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -165,6 +190,14 @@ button:hover {
     background: rgba(255, 255, 255, 0.138);
     padding: 30px;
     border-radius: 30px;
+}
+
+
+@media (max-width: 414px) {
+    .blogs {
+        align-content: center;
+        
+    }
 }
 .blog-post {
     max-width: 400px;
@@ -210,32 +243,6 @@ h1, h2 {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .menu-selections {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    header img {
-        margin-bottom: 10px;
-    }
-
-    main {
-        width: 95%;
-    }
-
-
-    h1, h2 {
-        font-size: 20px;
-    }
-}
 
 
 @media (max-width: 768px) {
@@ -256,16 +263,20 @@ h1, h2 {
     }
 
     main {
-        margin-top: 100px;
-        width: 95%;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
+
 
     h1, h2 {
         font-size: 20px;
     }
 }
 
-</style>
+
+
+</style> 
 
 
 </html>
